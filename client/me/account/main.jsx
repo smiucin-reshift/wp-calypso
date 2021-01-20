@@ -624,7 +624,7 @@ const Account = createReactClass( {
 		return <FormTextValidation isError={ true } text={ notice } />;
 	},
 
-	shouldDisabledSubmitButton() {
+	shouldDisableSubmitButton() {
 		const { userSettings } = this.props;
 
 		return (
@@ -683,7 +683,7 @@ const Account = createReactClass( {
 
 				<FormButton
 					isSubmitting={ this.state.submittingForm }
-					disabled={ this.shouldDisabledSubmitButton() }
+					disabled={ this.shouldDisableSubmitButton() }
 					onClick={ this.handleSubmitButtonClick }
 				>
 					{ this.state.submittingForm
@@ -932,7 +932,7 @@ const Account = createReactClass( {
 
 						<FormButton
 							isSubmitting={ this.state.submittingForm }
-							disabled={ this.shouldDisabledSubmitButton() }
+							disabled={ this.shouldDisableSubmitButton() }
 							onClick={ this.handleSubmitButtonClick }
 						>
 							{ this.state.submittingForm
