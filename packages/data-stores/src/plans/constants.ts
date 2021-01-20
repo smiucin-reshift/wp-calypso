@@ -184,3 +184,9 @@ export const currenciesFormats: Record< string, Currency > = {
 		decimal: 2,
 	},
 };
+
+export const FEATURE_IDS_THAT_REQUIRE_ANNUALLY_BILLED_PLAN = [
+	'custom-domain',
+	'support-live',
+	// 'priority-support',
+];

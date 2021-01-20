@@ -22,6 +22,7 @@ import {
 	plansProductSlugs,
 	monthlySlugs,
 	annualSlugs,
+	FEATURE_IDS_THAT_REQUIRE_ANNUALLY_BILLED_PLAN,
 } from './constants';
 import { fetchAndParse, wpcomRequest } from '../wpcom-request-controls';
 
@@ -95,6 +96,8 @@ function processFeatures( features: Feature[] ) {
 			name: feature.name,
 			description: feature.description,
 			type: feature.type ?? 'checkbox',
+			requiresAnnuallyBilledPlan:
+				FEATURE_IDS_THAT_REQUIRE_ANNUALLY_BILLED_PLAN.indexOf( feature.id ) > -1,
 		};
 		return features;
 	}, {} as Record< string, PlanFeature > );
