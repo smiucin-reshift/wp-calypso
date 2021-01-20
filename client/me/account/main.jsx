@@ -24,7 +24,6 @@ import config from 'calypso/config';
 import languages from '@automattic/languages';
 import { supportsCssCustomProperties } from 'calypso/lib/feature-detection';
 import { Card, Button } from '@automattic/components';
-import CardHeading from 'calypso/components/card-heading';
 import FormTextInput from 'calypso/components/forms/form-text-input';
 import FormTextValidation from 'calypso/components/forms/form-input-validation';
 import FormCheckbox from 'calypso/components/forms/form-checkbox';
