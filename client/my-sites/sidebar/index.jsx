@@ -712,7 +712,11 @@ export class MySitesSidebar extends Component {
 				className="sidebar__store"
 			>
 				{ isCalypsoStoreDeprecated && isBusiness( site.plan ) && (
-					<InfoPopover className="sidebar__store-tooltip" position="bottom right">
+					<InfoPopover
+						className="sidebar__store-tooltip"
+						position="bottom right"
+						showOnHover={ true }
+					>
 						{ infoCopy }
 					</InfoPopover>
 				) }
@@ -755,7 +759,6 @@ export class MySitesSidebar extends Component {
 
 		return (
 			<SidebarItem
-				className="sidebar__woocommerce-menu-item"
 				label="WooCommerce"
 				link={ storeLink }
 				onNavigate={ this.trackWooCommerceClick }
