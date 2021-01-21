@@ -118,7 +118,9 @@ const SiteTitle: React.FunctionComponent< Props > = ( { onSubmit, inputRef } ) =
 			<div className="site-title__input-wrapper">
 				<AcquireIntentTextInput
 					ref={ inputRef as React.MutableRefObject< HTMLInputElement | null > }
-					onChange={ setSiteTitle }
+					onChange={ ( title, { nativeEvent: e } ) => {
+						setSiteTitle( title, e.type, e.inputType, e.data );
+					} }
 					onFocus={ handleFocus }
 					onBlur={ handleBlur }
 					value={ siteTitle }
@@ -130,7 +132,11 @@ const SiteTitle: React.FunctionComponent< Props > = ( { onSubmit, inputRef } ) =
 					{ /* translators: The "it" here refers to the site title. */ }
 					<span>{ __( "Don't worry, you can change it later." ) }</span>
 				</p>
-				<p className="site-title__input-hint">{ siteTitleHistory }</p>
+				{ siteTitleHistory.map( ( h, i ) => (
+					<p key={ i } className="site-title__input-hint">
+						{ h }
+					</p>
+				) ) }
 			</div>
 		</form>
 	);

@@ -11,7 +11,7 @@ import './style.scss';
 
 interface Props {
 	value: string;
-	onChange: ( value: string ) => void;
+	onChange: ( value: string, event: React.ChangeEvent< HTMLInputElement > ) => void;
 	onFocus?: () => void;
 	onBlur?: () => void;
 	onKeyDown?: ( event: React.KeyboardEvent< HTMLInputElement > ) => void;
@@ -65,7 +65,7 @@ const AcquireIntentTextInput: React.FunctionComponent< Props > = ( {
 	const underlineWidth = getTextWidth( value || '', ref.current );
 
 	const handleChange = ( event: React.ChangeEvent< HTMLInputElement > ) => {
-		onChange?.( event.target.value );
+		onChange?.( event.target.value, event );
 	};
 
 	return (

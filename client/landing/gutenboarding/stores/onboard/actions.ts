@@ -198,9 +198,17 @@ export const setShowSignupDialog = ( showSignup: boolean ) => ( {
 	showSignup,
 } );
 
-export const setSiteTitle = ( siteTitle: string ) => ( {
+export const setSiteTitle = (
+	siteTitle: string,
+	eType: string | undefined,
+	eInputType: string | undefined,
+	eData: string | undefined
+) => ( {
 	type: 'SET_SITE_TITLE' as const,
 	siteTitle,
+	eType,
+	eInputType,
+	eData,
 } );
 
 export const setSiteVertical = ( siteVertical: SiteVertical ) => ( {

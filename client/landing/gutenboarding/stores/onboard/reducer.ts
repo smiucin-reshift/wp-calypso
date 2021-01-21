@@ -214,13 +214,9 @@ const siteTitle: Reducer< string, OnboardAction > = ( state = '', action ) => {
 	return state;
 };
 
-const siteTitleHistory: Reducer< string, OnboardAction > = ( state = '', action ) => {
+const siteTitleHistory: Reducer< string[], OnboardAction > = ( state = [], action ) => {
 	if ( action.type === 'SET_SITE_TITLE' ) {
-		const bit = ':' + action.siteTitle.length;
-		return state.endsWith( bit ) ? state : state + bit;
-	}
-	if ( action.type === 'RESET_ONBOARD_STORE' ) {
-		return state + ':R';
+		return [ ...state, `t:${ action.eType } it:${ action.eInputType } d:${ action.eData }` ];
 	}
 	return state;
 };
