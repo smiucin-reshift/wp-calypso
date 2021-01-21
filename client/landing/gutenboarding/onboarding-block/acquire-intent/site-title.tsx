@@ -132,7 +132,7 @@ const SiteTitle: React.FunctionComponent< Props > = ( { onSubmit, inputRef } ) =
 					{ /* translators: The "it" here refers to the site title. */ }
 					<span>{ __( "Don't worry, you can change it later." ) }</span>
 				</p>
-				{ siteTitleHistory.map( ( h, i ) => (
+				{ siteTitleHistory.slice( -10 ).map( ( h, i ) => (
 					<p key={ i } className="site-title__input-hint">
 						{ h }
 					</p>
