@@ -40,5 +40,8 @@
 	"devDependencies": {
 		"jest": "^26.4.0",
 		"rimraf": "^3.0.0"
+	},
+	"volta": {
+		"extends": "../../package.json"
 	}
 }

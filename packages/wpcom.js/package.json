@@ -45,5 +45,8 @@
 	},
 	"devDependencies": {
 		"wpcom-proxy-request": "^6.0.0"
+	},
+	"volta": {
+		"extends": "../../package.json"
 	}
 }

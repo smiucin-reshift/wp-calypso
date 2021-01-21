@@ -60,5 +60,8 @@
 		"@wordpress/i18n": "^3.17.0",
 		"react": "^16.8"
 	},
-	"private": true
+	"private": true,
+	"volta": {
+		"extends": "../../package.json"
+	}
 }

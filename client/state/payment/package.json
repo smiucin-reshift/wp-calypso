@@ -2,5 +2,8 @@
 	"sideEffects": [
 		"./init.js",
 		"./reducer.js"
-	]
+	],
+	"volta": {
+		"extends": "../../../package.json"
+	}
 }
